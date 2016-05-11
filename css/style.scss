@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+@media screen and (max-width: 875px) {
+  .button-container {
+    margin: 10px 0 !important;
+  }
+}
+html, body {
+  font-family: 'Lato', sans-serif;
+}
+
+section.page-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.section-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+  &:nth-child(1) {
+    width: 80%;
+  }
+  
+  h4 {
+    font-size: 50px;
+    font-weight: 300;
+    color: #3c3c3c;
+    margin-bottom: 30px;
+  }
+}
+
+/*** Horizontal Flip ***/
+
+.button-container {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 2px;
+  height: 45px;
+  width: 200px;
+  perspective: 1000;
+  
+  .flipper {
+    transition: all .5s ease-in-out;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .button {
+    height: 45px;
+    width: 200px;
+    border-radius: 3px;
+    backface-visibility: hidden;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 2px 4px -1px rgba(60,60,60,0.64);
+    
+    i.fa {
+      color: white;
+      font-size: 20px;
+      margin: auto;
+      text-shadow: .5px 1px 2px #3c3c3c;
+    }
+    
+    &.front {
+      z-index: 10;
+      background-image: linear-gradient(90deg, #53a0fd, #01c2f3);
+    }
+
+    &.back {
+      transform: rotateY(-180deg);
+      color: white;
+      font-size: 15px;
+      text-transform: uppercase;
+      background-image: linear-gradient(90deg, #01c2f3, #53a0fd);
+    }
+  }
+}
+
+.button-container:hover .flipper {
+		transform: rotateY(180deg);
+}
+
+/*** Vertical Flip ***/
+.vertical .button {
+  &.front {
+    background-image:  linear-gradient(90deg, #20438e, #3b5998);
+  }
+  
+  &.back {
+    background-image:  linear-gradient(90deg, #3b5998, #20438e);
+  }
+}
+
+.button-container.vertical {
+  position: relative;
+}
+
+.button-container.vertical:hover .flipper {
+		transform: rotateX(-180deg);
+}
+
+.vertical .flipper {
+    transform-origin: 100% 22.5px;
+}
+
+.vertical .flipper .back {
+    transform: rotateX(180deg);
+}
+
+/*** Oblique Flip ***/
+.oblique .flipper .button {
+  &.front {
+    background-image: linear-gradient(90deg, #125688, #ded1c1);
+  }
+  
+  &.back {
+    background-image: linear-gradient(90deg, #ded1c1, #125688);
+  }
+}
+
+.oblique .flipper {
+    transform-origin: top center;
+}
+
+.button-container.oblique:hover .flipper {
+   transform: rotate3d(1, 10, 0, 180deg);
+}
+
+.button-container-3d {
+  perspective: 1000;
+  
+  .flipper-3d {
+    transition: all .5s ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: 100% 22.5px;
+  }
+  
+  .button-3d {
+    height: 45px;
+    width: 200px;
+  }
+  
+  .button-3d.front {
+    transform: translateZ(22.5px);
+    background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  }
+  
+  .button-3d.back {
+    transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
+    background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  }
+}
+
+.button-container-3d:hover .flipper-3d {
+  transform: rotateX(90deg);
+}
+
