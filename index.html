@@ -3,6 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Favicons -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="img/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128" />
+	
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">	
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/animate.min.css">
@@ -17,18 +41,20 @@
 			<li class="nav-item active"><a href="#intro">INTRO</a></li>
 			<li class="nav-item"><a href="#flip">FLIP</a></li>
 			<li class="nav-item"><a href="#flip-3d">3D-FLIP</a></li>
-			<li class="nav-item"><a href="ios.html">SLIDE</a></li>
-			<li class="nav-item"><a href="about.html">PRESS</a></li>
-			<li class="nav-item"><a href="about.html">WATER EFFECT</a></li>
+			<li class="nav-item"><a href="#slide">SLIDE</a></li>
+			<li class="nav-item"><a href="#">SWITCH</a></li>
+			<li class="nav-item"><a href="#">WATER EFFECT</a></li>
 		</ul>
 	</nav>
 
 	<!-- Intro Page -->
 	<section class="page-container" id="intro">
-		<h2>Button.css</h2>
-		<p class="intro-des">A collect of CSS3 button animations. Designed to demonstrate the use of CSS3 animations, Button.css is intended to provide a lightweight and refreshing user experience. You can download the source code on <a href="https://github.com/kevinfan23/button.css">Github</a></p>
-		<br>
-		<p class="intro-des"><span>Button.css is released under the MIT license</span></p>
+	  	<section class="section-container">
+			<h2>Button.css</h2>
+			<p class="intro-des">A collect of CSS3 button animations. Designed to demonstrate the use of CSS3 animations, Button.css is intended to provide a lightweight and refreshing user experience. You can download the source code on <a href="https://github.com/kevinfan23/button.css">Github</a></p>
+			<br>
+			<p class="intro-des"><span>Button.css is released under the MIT license</span></p>
+	  	</section>
 	</section>
 	
 	<!-- 2-D Flip -->
@@ -40,10 +66,10 @@
 		    <div class="button-container button-flip-horizontal">
 		        <div class="flipper flipper-flip-horizontal">
 		            <div class="button front">
-		              <i class="fa fa-twitter"></i>
+		              	<i class="fa fa-twitter"></i>
 		            </div>
 		            <div class="button back">
-		              Twitter
+		              	Twitter
 		            </div>
 		        </div>
 		    </div>
@@ -52,10 +78,10 @@
 		    <div class="button-container button-flip-vertical">
 		        <div class="flipper flipper-flip-vertical">
 		            <div class="button front">
-		              <i class="fa fa-facebook"></i>
+		              	<i class="fa fa-facebook"></i>
 		            </div>
 		            <div class="button back">
-		              Facebook
+		              	Facebook
 		            </div>
 		        </div>
 		    </div>
@@ -64,39 +90,71 @@
 		    <div class="button-container button-flip-oblique">
 		        <div class="flipper flipper-flip-oblique">
 		            <div class="button front">
-		              <i class="fa fa-instagram"></i>
+		              	<i class="fa fa-instagram"></i>
 		            </div>
 		            <div class="button back">
-		              Instagram
+		              	Instagram
 		            </div>
 		        </div>
 		    </div>
+		    
 	  </section>
 	</section>
 	
+	
+	<!-- 3-D Flip -->
 	<section class="page-container" id="flip-3d">
 	  <section class="section-container">
 	    <h4>3-D Flip</h4>
-	        <div class="button-container button-container-3d">
-		        <div class="flipper-3d">
-		            <div class="button button-3d front">
-		              <i class="fa fa-codepen"></i>
+	    
+			<div class="button-container button-flip3d-vertical1">
+		        <div class="flipper flipper-flip3d-vertical1">
+		            <div class="button front">
+		              	<i class="fa fa-codepen"></i>
 		            </div>
 		            <div class="button button-3d back">
-		              Instagram
+		              	codepen
 		            </div>
 		        </div>
 	    	</div>
-			<div class="button-container button-container-3d">
-		        <div class="flipper-3d horizontal">
-		            <div class="button button-3d front">
-		              <i class="fa fa-github"></i>
+	    	
+			<div class="button-container button-flip3d-vertical2">
+		        <div class="flipper flipper-flip3d-vertical2">
+		            <div class="button front">
+		              	<i class="fa fa-github"></i>
 		            </div>
 		            <div class="button button-3d back">
-		              Github
+		              	Github
 		            </div>
 		        </div>
 	    	</div>
+	    	
+	  </section>
+	</section>
+	
+	
+	<!-- Slide -->
+	<section class="page-container" id="slide">
+	  <section class="section-container">
+	    <h4>Slide</h4>
+	    
+			<div class="button-container button-slide-horizontal">
+		        <div class="slider slider-horizontal">
+		            <div class="button">
+		              	<i class="fa fa-dribbble"></i>
+		            </div>
+		        </div>
+	    	</div>
+	    
+			<div class="button-container button-slide-vertical">
+		        <div class="slider-vertical">
+		            <div class="button">
+		              	<i class="fa fa-medium front"></i>
+		              	<i class="back">Medium</i>
+		            </div>
+		        </div>
+	    	</div>
+	    	
 	  </section>
 	</section>
 	

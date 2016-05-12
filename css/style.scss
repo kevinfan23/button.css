@@ -61,7 +61,6 @@ html, body {
 h2 {
 	font-size: 100px;
 	position: relative;
-	top: 200px;
 	color: #5b85c0;
 	background-image: -webkit-linear-gradient(90deg, #a558d4 0%, #34619e 80%);
 	-webkit-background-clip: text;
@@ -73,7 +72,7 @@ p.intro-des {
 	position: relative;
 	font-size: 20px;
 	line-height: 35px;
-	top: 270px;
+	margin-top: 50px;
 	
 	a {
 		color: $dark-gray;
@@ -157,19 +156,20 @@ section.page-container {
 }
 
 #intro {
-		max-width: 800px;
+	max-width: 800px;
+	
+	.section-container {
+		margin-top: 70px;
+	}
 }
 
 .section-container {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
+  width: 90%;
   transform: translate(-50%, -50%);
   text-align: center;
-  
-  &:nth-child(1) {
-    width: 90%;
-  }
   
   h4 {
     font-size: 50px;
@@ -189,11 +189,16 @@ section.page-container {
   letter-spacing: 2px;
   height: 45px;
   width: 200px;
-  perspective: 1000;
-  
+  -webkit-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000; 
+   
   .flipper {
     transition: all .5s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    
     position: relative;
   }
   
@@ -208,6 +213,7 @@ section.page-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    -webkit-box-shadow: 1px 2px 4px -1px rgba(60,60,60,0.64);
     box-shadow: 1px 2px 4px -1px rgba(60,60,60,0.64);
     
     i.fa {
@@ -238,10 +244,12 @@ section.page-container {
 .button-flip-horizontal {
 	
 	.front {
+		background-image: -webkit-linear-gradient(90deg, #53a0fd, #01c2f3);		
 		background-image: linear-gradient(90deg, #53a0fd, #01c2f3);
 	}
 	
 	.back {
+		background-image: -webkit-linear-gradient(90deg, #01c2f3, #53a0fd);
 		background-image: linear-gradient(90deg, #01c2f3, #53a0fd);
 		transform: rotateY(-180deg);
 	}
@@ -296,40 +304,150 @@ section.page-container {
 			3D-Flip
 -------------------------------- */
 
-.button-container-3d {
-  perspective: 1000;
+.button-flip3d-vertical1 {
+	  
+  	.flipper-flip3d-vertical1 {
+    	transform-origin: 100% 22.5px;
+  	}
   
-  .flipper-3d {
-    transition: all .5s ease-in-out;
-    transform-style: preserve-3d;
-    transform-origin: 100% 22.5px;
-  }
+  	.front {
+    	transform: translateZ(22.5px);
+		background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  	}
   
-  .button-3d {
-    height: 45px;
-    width: 200px;
-  }
-  
-  .button-3d.front {
-    transform: translateZ(22.5px);
-    background-image:  linear-gradient(90deg, #000, #3c3c3c);
-  }
-  
-  .button-3d.back {
-    transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
-    background-image:  linear-gradient(90deg, #000, #3c3c3c);
-  }
+  	.back {
+	  	-webkit-transform: rotateX(90deg) translateZ(22.5px);
+	  	-ms-transform: rotateX(90deg) translateZ(22.5px); 
+    	transform: rotateX(90deg) translateZ(22.5px);
+		background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  	}
+  	
+  	&:hover .flipper-flip3d-vertical1 {
+  		transform: rotateX(-90deg);
+	}
 }
 
-.button-container-3d:hover .flipper-3d {
-  transform: rotateX(90deg);
+.button-flip3d-vertical2 {
+	  
+  	.flipper-flip3d-vertical2 {
+    	transform-origin: 100% 22.5px;
+  	}
+  
+  	.front {
+    	transform: translateZ(22.5px);
+		background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  	}
+  
+  	.back {
+	  	-webkit-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
+	  	-ms-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px); 
+    	transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
+		background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  	}
+  	
+  	&:hover .flipper-flip3d-vertical2 {
+  		transform: rotateX(90deg);
+	}
 }
 
-.button-container-3d:nth-child(2) {
+/* -------------------------------- 
+			Slide
+-------------------------------- */
+
+.slider {
 	
-	&:hover .flipper-3d.horizontal {
-		 transform: rotateY(90deg);
+	i {
+		transition: all .3s ease-in-out;
+	
+		&:before {
+			transition: all .3s ease-in-out;
+		}
+		
+		&:after {
+			font-family: $Lato;
+			color: white;
+			font-size: 15px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			text-shadow: none;
+			content: 'Dribbble';
+			position: absolute;
+			opacity: 0;
+			top: 2.5px;
+			transition: all .3s ease-in-out;
+		}
+	}
+}
+
+/*** Horizontal Slide ***/
+
+.button-slide-horizontal {
+	
+	.button {
+		background-image:  linear-gradient(90deg, #ea4c89, #ee9b83);
 	}
 	
+	i {
+		position: relative;
+		display: inline-block;			
+		transition: all .3s ease-in-out;
+
+		&:before {
+			transition: all .3s ease-in-out;
+		}
+	}
+	
+	&:hover i {
+		padding-right: 100px;
+	}
+	
+	&:hover i:before {
+		opacity: 0;
+	}
+	&:hover i:after {
+		opacity: 1;
+	}	
 }
+
+/*** Vertical Slide ***/
+
+.button-slide-vertical {
+	overflow: hidden;
+	height: 45px;
+	
+	.button {
+		background-image:  linear-gradient(90deg, #1c84a6, #3CB371);
+		overflow: hidden;
+		height: 45px;
+	}
+	
+	i {
+		position: relative;
+		margin: 0 !important;
+		top: 10px;
+		transition: all .3s ease-in-out;
+		opacity: 1;			
+	}
+	
+	i.back {
+		font-family: $Lato;
+		color: white;
+		font-size: 15px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	
+	&:hover i.front {
+		transform: translateY(-30px);
+		opacity: 0;			
+	}
+	
+	&:hover i.back {
+		transform: translateY(-20px);
+		opacity: 1;			
+	}
+}
+
 

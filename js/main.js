@@ -10,6 +10,9 @@ $(document).ready(function() {
 		updateNavigation();
 	});
 	
+	$('.button-container').bind('touchstart mousedown', function(e){
+	});
+	
 	// Update nav selected when click
 	$('a').on('click', function() {
 		console.log("haha");
