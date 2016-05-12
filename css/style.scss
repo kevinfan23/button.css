@@ -150,6 +150,7 @@ p.intro-des {
 section.page-container {
 	margin: auto;
 	width: 90%;
+	max-width: 800px;
 	height: 100vh;
 	position: relative;
 	text-align: center;
@@ -183,7 +184,7 @@ section.page-container {
 
 .button-container {
   display: inline-block;
-  margin: 0 10px;
+  margin: 10px 10px;
   cursor: pointer;
   font-weight: 400;
   letter-spacing: 2px;
@@ -447,6 +448,114 @@ section.page-container {
 	&:hover i.back {
 		transform: translateY(-20px);
 		opacity: 1;			
+	}
+}
+
+
+/* -------------------------------- 
+			Water Fill
+-------------------------------- */
+
+/*** Water Fill Black ***/
+
+p.reference {
+	margin-top: -20px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	
+	a {
+		color: $dark-gray;
+	}
+}
+
+.button-water-fill {
+	.button {
+		background-position: 0 -50%;
+		background-repeat: repeat-x;
+	    transition: background-position .75s ease;
+
+   		&:hover {
+			background-position: 100% 60%;
+			color: white !important;
+		}
+	}
+	
+	&.wave-blue .button {
+		color: #3CBBF7;
+		background-image: url('../img/waves/wave-blue.png');	
+	}
+	
+	&.wave-red .button {
+		color: #E74C3C;
+		background-image: url('../img/waves/wave-red.png');	
+	}
+	
+	&.wave-yellow .button {
+		color: #F8E71C;
+		background-image: url('../img/waves/wave-yellow.png');	
+	}
+	
+	&.wave-white .button {
+		background-color: #000;
+		color: #fff;
+		background-image: url('../img/waves/wave-white.png');	
+		
+		&:hover {
+			color: black !important;
+		}
+	}
+	
+	&.wave-black .button {
+		color: #000;
+		background-image: url('../img/waves/wave-black.png');	
+	}
+}
+
+/*** SocialBar ***/
+
+.socialbar-container {
+	position: absolute;
+	top: 100px;
+	right: 50px;
+	z-index: 10;
+}
+
+.footer {
+	position:relative;
+	bottom:20px;
+	margin-top: -50px;
+	height:20px;
+	width:230px;
+	left: 50%;
+	margin-right: -50%;
+	transform: translateX(-50%);
+}
+
+.socialbar {
+	width: 230px;
+	
+	.social-item a {
+		font-size: 20px;
+	}
+
+	.fa-desktop:hover {
+			color: #5530cc;
+	}
+	
+	.fa-linkedin:hover {
+			color: #007bb5;
+	}
+	
+	.fa-github:hover {
+			color: #ded1c1;
+	}
+	
+	.fa-codepen:hover {
+			color: #9a9595;
+	}
+
+	.fa-dribbble:hover {
+			color: #ea4c89;
 	}
 }
 

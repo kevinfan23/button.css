@@ -19,6 +19,7 @@ $(document).ready(function() {
 		$('.nav-item').removeClass('active');
 		$(this).parent().addClass('active');
 	});
+	
 });
 
 // Smooth the scroll action
