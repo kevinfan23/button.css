@@ -1,0 +1,227 @@
+/*** Import Fonts ***/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+/*** Variables ***/
+/* -------------------------------- 
+Small Window Size and Mobile Style
+-------------------------------- */
+@media screen and (max-width: 875px) {
+  .button-container {
+    margin: 10px 10px !important; }
+  h2 {
+    font-size: 15vw !important; } }
+
+@media screen and (max-width: 550px) {
+  .nav, .navbar {
+    width: 90% !important; }
+    .nav .nav-item, .navbar .nav-item {
+      font-size: 10px !important; } }
+
+@media screen and (max-width: 350px) {
+  .navbar-container {
+    height: 120px !important; }
+  .nav, .navbar {
+    flex-wrap: wrap !important; }
+    .nav .nav-item, .navbar .nav-item {
+      margin: 5px 5px !important; } }
+
+/* -------------------------------- 
+		General Style
+-------------------------------- */
+html, body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300; }
+
+h2 {
+  font-size: 100px;
+  position: relative;
+  top: 200px;
+  color: #5b85c0;
+  background-image: -webkit-linear-gradient(90deg, #a558d4 0%, #34619e 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear; }
+
+p.intro-des {
+  position: relative;
+  font-size: 20px;
+  line-height: 35px;
+  top: 270px; }
+  p.intro-des a {
+    color: #3c3c3c; }
+  p.intro-des span {
+    font-size: 15px; }
+
+/*** Navbar ***/
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to bottom, white 50%, rgba(255, 255, 255, 0) 100%); }
+
+.nav, .navbar {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  flex-wrap: nowrap; }
+  .nav a, .navbar a {
+    color: #3c3c3c;
+    text-decoration: none; }
+  .nav .nav-item, .navbar .nav-item {
+    padding: 5px 0; }
+    .nav .nav-item:after, .navbar .nav-item:after {
+      content: '\00a0';
+      display: block;
+      height: 1px;
+      width: 100%;
+      position: relative;
+      top: 3px;
+      background: transparent;
+      transition: top 0.3s ease-out;
+      -webkit-transition: top 0.3s ease-out; }
+    .nav .nav-item:hover:after, .navbar .nav-item:hover:after {
+      top: 7px;
+      background: #3c3c3c; }
+
+.active:after {
+  height: 2px !important;
+  background: #e74c3c !important; }
+
+section.page-container {
+  margin: auto;
+  width: 90%;
+  height: 100vh;
+  position: relative;
+  text-align: center; }
+
+#intro {
+  max-width: 800px; }
+
+.section-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .section-container:nth-child(1) {
+    width: 90%; }
+  .section-container h4 {
+    font-size: 50px;
+    font-weight: 300;
+    color: #3c3c3c;
+    margin-bottom: 30px; }
+
+/*** General Button Styles ***/
+.button-container {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 2px;
+  height: 45px;
+  width: 200px;
+  perspective: 1000; }
+  .button-container .flipper {
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    position: relative; }
+  .button-container .button {
+    height: 45px;
+    width: 200px;
+    border-radius: 3px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64); }
+    .button-container .button i.fa {
+      color: white;
+      font-size: 20px;
+      margin: auto;
+      text-shadow: 0.5px 1px 2px #3c3c3c; }
+    .button-container .button.front {
+      z-index: 10; }
+    .button-container .button.back {
+      color: white;
+      font-size: 15px;
+      text-transform: uppercase; }
+
+/* -------------------------------- 
+			Flip
+-------------------------------- */
+/*** Horizontal Flip ***/
+.button-flip-horizontal .front {
+  background-image: linear-gradient(90deg, #53a0fd, #01c2f3); }
+
+.button-flip-horizontal .back {
+  background-image: linear-gradient(90deg, #01c2f3, #53a0fd);
+  transform: rotateY(-180deg); }
+
+.button-flip-horizontal:hover .flipper-flip-horizontal {
+  transform: rotateY(180deg); }
+
+/*** Vertical Flip ***/
+.button-flip-vertical .flipper-flip-vertical {
+  transform-origin: 100% 22.5px; }
+
+.button-flip-vertical .front {
+  background-image: linear-gradient(90deg, #20438e, #3b5998); }
+
+.button-flip-vertical .back {
+  transform: rotateX(180deg);
+  background-image: linear-gradient(90deg, #3b5998, #20438e); }
+
+.button-flip-vertical:hover .flipper-flip-vertical {
+  transform: rotateX(-180deg); }
+
+/*** Oblique Flip ***/
+.button-flip-oblique .front {
+  background-image: linear-gradient(90deg, #125688, #ded1c1); }
+
+.button-flip-oblique .back {
+  transform: rotateY(-180deg);
+  background-image: linear-gradient(90deg, #ded1c1, #125688); }
+
+.button-flip-oblique:hover .flipper-flip-oblique {
+  transform: rotate3d(1, 10, 0, 180deg); }
+
+/* -------------------------------- 
+			3D-Flip
+-------------------------------- */
+.button-container-3d {
+  perspective: 1000; }
+  .button-container-3d .flipper-3d {
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: 100% 22.5px; }
+  .button-container-3d .button-3d {
+    height: 45px;
+    width: 200px; }
+  .button-container-3d .button-3d.front {
+    transform: translateZ(22.5px);
+    background-image: linear-gradient(90deg, #000, #3c3c3c); }
+  .button-container-3d .button-3d.back {
+    transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
+    background-image: linear-gradient(90deg, #000, #3c3c3c); }
+
+.button-container-3d:hover .flipper-3d {
+  transform: rotateX(90deg); }
+
+.button-container-3d:nth-child(2):hover .flipper-3d.horizontal {
+  transform: rotateY(90deg); }
