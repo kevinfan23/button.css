@@ -314,9 +314,144 @@ section.page-container {
     opacity: 1; }
 
 /* -------------------------------- 
+			Switch
+-------------------------------- */
+.switch-container {
+  display: inline-block;
+  margin: 10px 10px; }
+
+/*** Slim Switch Style ***/
+input.slim {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0; }
+  input.slim + label {
+    display: block;
+    position: relative;
+    text-indent: -5000px;
+    height: 10px;
+    width: 40px;
+    border-radius: 15px; }
+  input.slim + label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 10px;
+    width: 10px;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    background: transparent;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+  input.slim + label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    top: -5px;
+    left: 0px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+  input.slim:checked + label:before {
+    width: 40px; }
+  input.slim:checked + label:after {
+    left: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+input#slim-blue + label {
+  background: rgba(60, 187, 247, 0.7); }
+
+input#slim-blue + label:after {
+  background: #3CBBF7; }
+
+input#slim-blue:checked + label:before {
+  background: rgba(60, 187, 247, 0.7); }
+
+input#slim-red + label {
+  background: rgba(231, 76, 60, 0.7); }
+
+input#slim-red + label:after {
+  background: #E74C3C; }
+
+input#slim-red:checked + label:before {
+  background: rgba(231, 76, 60, 0.7); }
+
+input#slim-green + label {
+  background: rgba(19, 191, 17, 0.7); }
+
+input#slim-green + label:after {
+  background: #13bf11; }
+
+input#slim-green:checked + label:before {
+  background: rgba(19, 191, 17, 0.7); }
+
+input#slim-black + label {
+  background: rgba(0, 0, 0, 0.7); }
+
+input#slim-black + label:after {
+  background: black; }
+
+input#slim-black:checked + label:before {
+  background: rgba(0, 0, 0, 0.7); }
+
+/*** iOS Style ***/
+input#ios {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0; }
+  input#ios + label {
+    display: block;
+    position: relative;
+    box-shadow: inset 0 0 0px 1px #a6a6a6;
+    text-indent: -5000px;
+    height: 30px;
+    width: 50px;
+    border-radius: 15px; }
+  input#ios + label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    background: transparent;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+  input#ios + label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    left: 0px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+  input#ios:checked + label:before {
+    width: 50px;
+    background: #13bf11; }
+  input#ios:checked + label:after {
+    left: 20px;
+    box-shadow: inset 0 0 0 1px #13bf11, 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+/* -------------------------------- 
 			Water Fill
 -------------------------------- */
-/*** Water Fill Black ***/
+/*** Water Fill ***/
 p.reference {
   margin-top: -20px;
   margin-bottom: 10px;
@@ -345,16 +480,19 @@ p.reference {
   background-image: url("../img/waves/wave-yellow.png"); }
 
 .button-water-fill.wave-white .button {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   background-image: url("../img/waves/wave-white.png"); }
   .button-water-fill.wave-white .button:hover {
     color: black !important; }
 
 .button-water-fill.wave-black .button {
-  color: #000;
+  color: black;
   background-image: url("../img/waves/wave-black.png"); }
 
+/* -------------------------------- 
+			Footer
+-------------------------------- */
 /*** SocialBar ***/
 .socialbar-container {
   position: absolute;
