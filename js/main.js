@@ -20,6 +20,8 @@ $(document).ready(function() {
 		$(this).parent().addClass('active');
 	});
 	
+	slideSwitch();
+	
 });
 
 // Smooth the scroll action
@@ -71,4 +73,29 @@ function updateNavigation() {
          .parent().removeClass("active")
          .end().filter("[href='#"+id+"']").parent().addClass("active");
    }                   
+}
+
+// Update slide switch highlight
+function slideSwitch() {
+	$('.switch-slide').on('click', function() {
+		
+	var activeSpan = $('.switch-toggle-slide .active');
+
+	if (activeSpan.css('left') == '0px') {
+		activeSpan.css('left', '50%');
+	}
+	
+	if (activeSpan.css('left') == '125px') {
+		activeSpan.css('left', '0');
+	}
+	
+	if ($(this).hasClass('active-switch')) {
+		$('.switch-slide').addClass('active-switch')
+		$(this).removeClass('active-switch');
+	}
+	else {
+		$('.switch-slide').removeClass('active-switch')
+		$(this).addClass('active-switch');
+	}
+	});
 }

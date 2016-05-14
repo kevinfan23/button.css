@@ -50,6 +50,16 @@ p.intro-des {
   p.intro-des span {
     font-size: 15px; }
 
+.button-row-container {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; }
+
 /*** Navbar ***/
 .navbar-container {
   position: fixed;
@@ -320,6 +330,51 @@ section.page-container {
   display: inline-block;
   margin: 10px 10px; }
 
+/*** Toggle Slide Style ***/
+.switch-toggle-slide {
+  width: 250px;
+  height: 20px;
+  border: 1px solid rgba(218, 220, 222, 0.7);
+  border-radius: 3px;
+  will-change: transform;
+  background: rgba(74, 82, 85, 0.8);
+  position: relative; }
+  .switch-toggle-slide span.active {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 125px;
+    height: 20px;
+    background: rgba(218, 220, 222, 0.7);
+    z-index: -1;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+  .switch-toggle-slide .switch-slide {
+    width: 125px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: transparent;
+    color: white;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+    .switch-toggle-slide .switch-slide#slide-on {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px; }
+    .switch-toggle-slide .switch-slide#slide-off {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px; }
+    .switch-toggle-slide .switch-slide.active-switch {
+      color: #3c3c3c; }
+
 /*** Slim Switch Style ***/
 input.slim {
   max-height: 0;
@@ -447,6 +502,88 @@ input#ios {
   input#ios:checked + label:after {
     left: 20px;
     box-shadow: inset 0 0 0 1px #13bf11, 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+/*** Skewed Switch Style ***/
+.switch-skewed {
+  position: relative;
+  height: 30px;
+  width: 50px;
+  margin-top: 29px;
+  background: #a6a6a6;
+  transform: skew(-15deg, 0);
+  overflow: hidden;
+  -moz-transition: .2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out; }
+  .switch-skewed .skewed-container {
+    width: 100px;
+    height: 30px;
+    transform: skew(15deg, 0);
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+  .switch-skewed .skewed {
+    float: left;
+    height: 30px;
+    width: 50px;
+    display: inline-block;
+    color: white; }
+  .switch-skewed:hover {
+    background: rgba(19, 191, 17, 0.7); }
+  .switch-skewed:hover .skewed-container {
+    transform: translateX(-50px) skew(15deg, 0); }
+
+/*** Flat Day/Night Switch Style ***/
+input.flat {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0; }
+  input.flat + label {
+    display: block;
+    position: relative;
+    text-indent: -5000px;
+    height: 30px;
+    width: 80px;
+    border-radius: 15px;
+    background: yellow; }
+  input.flat + label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 10px;
+    width: 10px;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    background: transparent;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+  input.flat + label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    top: -5px;
+    left: 0px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out; }
+  input.flat:checked + label:before {
+    width: 40px; }
+  input.flat:checked + label:after {
+    left: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
 
 /* -------------------------------- 
 			Water Fill
