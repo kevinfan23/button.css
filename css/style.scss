@@ -87,7 +87,7 @@ p.intro-des {
 }
 
 .button-row-container {
-	width: 200px;
+	width: 250px;
 	height: 50px;
 	position: relative;
 	display: flex;
@@ -745,7 +745,7 @@ input#ios {
 	}
 	
 	&:hover {
-		background: rgba(19, 191, 17, 0.7);
+		background: $UIgreen;
 	}
 	
 	&:hover .skewed-container {
@@ -753,61 +753,58 @@ input#ios {
 	}
 }
 
-/*** Flat Day/Night Switch Style ***/
+/*** Flat Switch Style ***/
 
-input.flat {
-	max-height: 0;
-	max-width: 0;
-	opacity: 0;
-	  
-	& + label {
-		display: block;
-		position: relative;
-		text-indent: -5000px;
-		height: 30px;
-		width: 80px;
-		border-radius: 15px;
-		background: yellow;
-  	}
-  	
-  	& + label:before {
-		content: "";
-		position: absolute;
-		display: block;
-		height: 10px;
-		width: 10px;
-		top: 0;
-		left: 0;
-		border-radius: 15px;
-		background: transparent;
+.switch-flat {
+	height: 35px;
+	width: 35px;
+	margin-top: 30px;
+	background-image: -webkiet-linear-gradient(#ece9e9 10%, #ffffff 100%);
+	background-image: linear-gradient(#ece9e9 10%, #ffffff 100%);	
+	-webkit-box-shadow: inset 0px 1px 1px #aeaaaa;
+	box-shadow: inset 0px 1px 1px #aeaaaa;
+	border-radius: 50%;
+	overflow: hidden;
+	
+	.flat-container {
+		height: 70px;
+		width: 35px;
+		color: $light-gray;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 18px;
+		line-height: 35px;
+		font-weight: 400;
 		-moz-transition: .2s ease-in-out;
 		-webkit-transition:	.2s ease-in-out;
 		transition: .2s ease-in-out;
+		border-radius: 50%;
 	}
 	
-	& + label:after {
-		content: "";
-		position: absolute;
-		display: block;
-		height: 20px;
-		width: 20px;
-		top: -5px;
-		left: 0px;
-		border-radius: 15px;
-		background: white;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
-		-moz-transition: .2s ease-in-out;
-		-webkit-transition:	.2s ease-in-out;
-		transition: .2s ease-in-out;
+	.flat {
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		z-index: -1;
+		
+		&.flat-off {
+			background: transparent;	
+		}
+		
+		&.flat-on {
+			color: white;
+			font-size: 15px;
+		}
 	}
 	
-	&:checked + label:before {
-		width: 40px;
+	&:hover {
+		background: rgba(19, 191, 17, 0.7);
+		-webkit-box-shadow: inset 0px 1px 1px $UIgreen;
+		box-shadow: inset 0px 1px 1px $UIgreen;
 	}
-  	
-  	&:checked + label:after {
-	  	left: 20px;
-	  	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	
+	&:hover .flat-container {
+		transform: translateY(-35px);
 	}
 }
 
