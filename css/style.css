@@ -22,7 +22,12 @@ Small Window Size and Mobile Style
   .nav, .navbar {
     flex-wrap: wrap !important; }
     .nav .nav-item, .navbar .nav-item {
-      margin: 5px 5px !important; } }
+      margin: 5px 5px !important; }
+  p.intro-des {
+    margin-top: 30px !important;
+    font-size: 15px !important; }
+    p.intro-des span {
+      font-size: 12px !important; } }
 
 /* -------------------------------- 
 		General Style
