@@ -16,7 +16,7 @@ Small Window Size and Mobile Style
     .nav .nav-item, .navbar .nav-item {
       font-size: 10px !important; } }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
   .navbar-container {
     height: 120px !important; }
   .nav, .navbar {
