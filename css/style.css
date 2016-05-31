@@ -27,7 +27,11 @@ Small Window Size and Mobile Style
     margin-top: 30px !important;
     font-size: 15px !important; }
     p.intro-des span {
-      font-size: 12px !important; } }
+      font-size: 12px !important; }
+  h4 {
+    font-size: 40px !important; }
+  .next-collection {
+    font-size: 13px !important; } }
 
 /* -------------------------------- 
 		General Style
@@ -64,6 +68,11 @@ p.intro-des {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto; }
+
+.next-collection {
+  font-size: 15px; }
+  .next-collection a {
+    color: #3c3c3c; }
 
 /*** Navbar ***/
 .navbar-container {
