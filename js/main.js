@@ -1,78 +1,125 @@
-$(document).ready(function() {
-	
-	smoothScroll();
-	
-	// Animate menu using animate.css
-	$('.navbar').addClass('animated bounceInDown');
+/*** Variable ***/
+var contentSections = $('.image-container'),
+	navigationItems = $('.sidenav-item a');
 
-	// Scroll event listen
-	$(window).on('scroll', function(){
-		updateNavigation();
-	});
-	
-	$('.button-container, .switch-container').bind('touchstart mousedown', function(e){
-	});
-	
-	// Update nav selected when click
-	$('a').on('click', function() {
-		console.log("haha");
-		$('.nav-item').removeClass('active');
-		$(this).parent().addClass('active');
-	});
+$(document).ready(function() {
 	
 	slideSwitch();
 	
+	/*** kfan.io Animation ***/
+	
+	$('.collapse').addClass('uncollapsed');
+		$('#dot').addClass('unshifted');
+	
+		$(window).scroll(function() {
+			if ($(window).scrollTop() <= 10) {
+				$('.collapse').removeClass('collapsed');
+				$('.collapse').addClass('uncollapsed');
+				$('#dot').removeClass('shifted');
+				$('#dot').addClass('unshifted');
+				$('.kfan-logo .logo').css('color', '#fff');		
+			}
+			else {
+				$('.collapse').removeClass('uncollapsed');
+				$('.collapse').addClass('collapsed');
+				$('#dot').removeClass('unshifted');
+				$('#dot').addClass('shifted');	
+				$('.kfan-logo .logo').css('color', '#000');		
+			}
+		});
+		
+	/*** Connect page effects ***/
+	$('#connect').on('click', function() {
+		$('.connect-overlay').height($(window).height());
+		$('.connect-overlay').toggleClass('connected-overlay');
+		$('.connect-container').toggleClass('connected-container');
+		$('li.connect-item').toggleClass('fadeInDownSwing');
+		$('.connect-container').toggleClass('fixed-page');
+		$('#connect').toggleClass('connected');
+		$('.connect-overlay').on('click', function() {
+			$('.connect-overlay').removeClass('connected-overlay');
+			$('.connect-container').removeClass('connected-container')
+			$('li.connect-item').removeClass('fadeInDownSwing');
+			$('.connect-container').removeClass('fixed-page');
+			$('#connect').removeClass('connected');
+		});
+	});
+	
+	/*** Side Navbar Animations ***/
+	updateNavigation();
+	
+	$(window).on('scroll', function(){
+		updateNavigation();
+	    if (isElementInViewport($('#section1'))) {
+		    $('.sidenavbar-container').removeClass('is-appeared');
+	    }
+	    else {
+		    $('.sidenavbar-container').addClass('is-appeared');
+	    }
+	});	
+
+	//smooth scroll to the section
+	navigationItems.on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });	
+    
+    $('.menu-icon').on('click', function() {
+	    var span = $('#menu-span');
+	    if (span.text() === "close.") {
+		    console.log('haha');
+		    span.text('menu.');
+	    } else {
+			$('#menu-span').text('close.');
+		}
+		$('body').toggleClass('fixed-page');
+		$('.menu-container').toggleClass('fadeInScale');
+		$('.connect-overlay').removeClass('connected-overlay');
+		$('.connect-container').removeClass('connected-container');
+		$('li.connect-item').removeClass('fadeInDownSwing');
+		$('.connect-container').removeClass('fixed-page');
+		$('#connect').removeClass('connected');
+	});	
+   
 });
 
-// Smooth the scroll action
-function smoothScroll() {
-	
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 500);
-        return false;
-      }
-    }
-  });
+/*** Helper Functions ***/
+				
+// Update navigation dots and labels
+function updateNavigation() {
+	contentSections.each(function(){
+		$this = $(this);
+		var activeSection = $('.sidenav-item a[href="#'+$this.attr('id')+'"]').data('number') - 1 ;
+		if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+			navigationItems.eq(activeSection).addClass('is-selected');
+		}else {
+			navigationItems.eq(activeSection).removeClass('is-selected');
+		}
+	});
 }
 
-// Update nav selected
-function updateNavigation() {
-	var lastId,
-    topMenu = $(".navbar"),
-    topMenuHeight = topMenu.outerHeight()+15,
-    // All list items
-    menuItems = topMenu.find("a"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
-    });
-    
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href='#"+id+"']").parent().addClass("active");
-   }                   
+// Smooth scroll actions
+function smoothScroll(target) {
+    $('body,html').animate(
+    	{'scrollTop':target.offset().top},
+    	400
+    );
+}
+
+// Check if element is in the viewport
+function isElementInViewport(elem) {
+    var $elem = $(elem);
+
+    // Get the scroll position of the page.
+    var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+    var viewportTop = $(scrollElem).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    // Get the position of the element on the page.
+    var elemTop = Math.round( $elem.offset().top );
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
 }
 
 // Update slide switch highlight

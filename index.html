@@ -29,38 +29,111 @@
 	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">	
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Button.css</title>
 </head>
 <body>
+<!-- kfan.io Logo -->
+<div class="block-logo kfan-logo">
+	<a class="home-top" href="http://kfan.io"><span class="logo">kf<span class="collapse"><i>a</i><i>n</i></span><i id="dot">.</i></span></a>
+</div>
+
+<!-- Mobile Menu Logo -->
+<div class="block-logo menu-logo">
+	<a class="menu-icon" href="#"><span class="logo" id="menu-span">menu.</span></a>
+</div>
+		
+<!-- Side Navbar -->
+<nav class="sidenavbar-container">
+	<ul class="sidenav navbar">
+		<li class="sidenav-item sidenav-heading"><a href="#section1" data-number="1" class="sidenav-heading-link">Button.css</a></li>
+		<li class="sidenav-item"><a class="sidenav-link" href="#section2" data-number="2">00. Motivation</a></li>
+		<li class="sidenav-item"><a class="sidenav-link" href="#section3" data-number="3">01. Flip</a></li>
+		<li class="sidenav-item"><a class="sidenav-link" href="#section4" data-number="4">02. 3-D Flip</a></li>
+		<li class="sidenav-item"><a class="sidenav-link" href="#section5" data-number="5">03. Slide</a></li>
+		<li class="sidenav-item"><a class="sidenav-link" href="#section6" data-number="6">04. Switch</a></li>
+		<li class="sidenav-item"><a class="sidenav-link" href="#section7" data-number="7">05. Water Fill</a></li>
+	</ul>
+</nav>
+
+<div class="page-container">
 	
-	<!-- Navbar -->
-	<nav class="navbar-container">
-		<ul class="nav navbar">
-			<li class="nav-item active"><a href="#intro">INTRO</a></li>
-			<li class="nav-item"><a href="#flip">FLIP</a></li>
-			<li class="nav-item"><a href="#flip-3d">3D-FLIP</a></li>
-			<li class="nav-item"><a href="#slide">SLIDE</a></li>
-			<li class="nav-item"><a href="#switch">SWITCH</a></li>
-			<li class="nav-item"><a href="#water-fill">WATER FILL</a></li>
+	<!-- Menu Overlay -->
+	<div class="menu-container">
+		<ul class="menu-list">
+			<li class="menu-item">
+				<a href="http://kfan.io/project">Project</a>	
+			</li>
+			<li class="menu-item">
+				<a href="http://kfan.io/about">About</a>	
+			</li>
+			<li class="menu-item">
+				<a href="#" id="connect">Connect</a>	
+			</li>
+		</ul>
+	</div>
+	
+	<div class="connect-overlay"></div>
+
+	<nav class="connect-container">
+		<ul>
+			<li class="connect-item">
+				<a href="https://www.linkedin.com/in/zixuan-kevin-fan-85492226" target="_blank" class="connect-link">
+					<i class="fa-linkedin"></i>
+					<p class="connect-info">@Zixuan(Kevin) Fan</p>
+				</a>
+			</li>
+			<li class="connect-item">
+				<a href="https://github.com/kevinfan23" target="_blank" class="connect-link">
+					<i class="fa-github"></i>
+					<p class="connect-info">@kevinfan23</p>
+				</a>
+			</li>
+			<li class="connect-item">
+				<a href="http://codepen.io/kevinfan23/" target="_blank" class="connect-link">
+					<i class="fa-codepen"></i>
+					<p class="connect-info">@kevinfan23</p>
+				</a>
+			</li>
+			<li class="connect-item">
+				<a href="https://dribbble.com/kevinfan23" target="_blank" class="connect-link">
+					<i class="fa-dribbble"></i>
+					<p class="connect-info">@kevinfan23</p>
+				</a>
+			</li>
+			<li class="connect-item">
+				<a href="https://medium.com/@kevin.fan23" target="_blank" class="connect-link">
+					<i class="fa-medium"></i>
+					<p class="connect-info">@kevin.fan23</p>
+				</a>
+			</li>
+			<li class="connect-item">
+				<a href="mailto:kevinfan23@ucla.edu" class="connect-link">
+					<i class="fa-envelope-o"></i>
+					<p class="connect-info">kevinfan23@ucla.edu</p>
+				</a>
+			</li>	
 		</ul>
 	</nav>
+	
 
+	
+	<!-- Header Page -->
+	<div class="header" id="section1">
+		<h4 class="">Button.css</h4>
+	</div>
+	
 	<!-- Intro Page -->
-	<section class="page-container" id="intro">
-	  	<section class="section-container">
-			<h2>Button.css</h2>
-			<p class="intro-des">A collection of CSS3 button animations. Designed to demonstrate the uses of CSS3 animations, Button.css is intended to provide a lightweight and refreshing user experience. You can download the source code on <a href="https://github.com/kevinfan23/button.css">Github</a></p>
-			<br>
-			<p class="intro-des"><span>Button.css is released under the MIT license</span></p>
-	  	</section>
-	</section>
+	<div class="image-container intro" id="section2">
+		<p>
+			Button.css:
+			<span>The tiniest yet most prevalent element on the web:<br>How can we make buttons meaningful?</span></br>
+		</p>
+	</div>
 	
 	<!-- 2-D Flip -->
-	<section class="page-container" id="flip">
+	<section class="page-container flip" id="section3">
 	  	<section class="section-container">
 	    	<h4>Flip</h4>
 	    
@@ -105,7 +178,7 @@
 	
 	
 	<!-- 3-D Flip -->
-	<section class="page-container" id="flip-3d">
+	<section class="page-container flip-3d" id="section4">
 	  	<section class="section-container">
 		    <h4>3-D Flip</h4>
 		    
@@ -138,7 +211,7 @@
 	
 	
 	<!-- Slide -->
-	<section class="page-container" id="slide">
+	<section class="page-container" id="section5">
 	  	<section class="section-container">
 		    <h4>Slide</h4>
 		    
@@ -165,7 +238,7 @@
 	</section>
 	
 	<!-- Switch -->
-	<section class="page-container" id="switch">
+	<section class="page-container" id="section6">
 	  <section class="section-container">
 	    <h4>Switch</h4>
 	    
@@ -239,7 +312,7 @@
 	</section>
 	
 	<!-- Water Fill -->
-	<section class="page-container" id="water-fill">
+	<section class="page-container" id="section7">
 	  <section class="section-container">
 	    <h4>Water Fill</h4>
 	    <p class="reference">*Inspired by <a href="http://codepen.io/Bergability/" target="_blank">Scott Berg</a></p>
@@ -287,25 +360,13 @@
 	  </section>
 	</section>
 	
-	<!-- Recommendations -->
-	
-	<section class="page-container" id="water-fill">
-	  <section class="section-container">	
-		  <h4>Next Collection</h4>
-		  <p class="next-collection"><a href="http://kfan.io/svg.html/">Svg.html</a>: A collection of HTML5 Svg animations</p>
-	  </section>
-	</section>
-	
-	<!-- Social Media and Contacts at Footer-->
-	<nav class="footer">
-		<ul class="nav socialbar">
-			<li class="social-item"><a href="http://kfan.io" target="_blank" class="fa  fa-desktop"></a></li>
-			<li class="social-item"><a href="https://www.linkedin.com/in/zixuan-kevin-fan-85492226" target="_blank" class="fa fa-linkedin"></a></li>
-			<li class="social-item"><a href="https://github.com/kevinfan23" target="_blank" class="fa fa-github"></a></li>
-			<li class="social-item"><a href="http://codepen.io/kevinfan23/" target="_blank" class="fa fa-codepen"></a></li>
-			<li class="social-item"><a href="https://dribbble.com/kevinfan23" target="_blank" class="fa fa-dribbble"></a></li>
-		</ul>
-	</nav>
+	<!-- Footer Page -->
+	<a class="footer" href="http://kfan.io">
+		<div class="footer-container">
+			<p>Take me home</p>
+		</div>
+	</a>
+</div>
 	
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="js/main.js"></script>
