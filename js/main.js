@@ -6,6 +6,9 @@ $(document).ready(function() {
 	
 	slideSwitch();
 	
+	$('.button-container, .switch-container').bind('touchstart mousedown', function(e){
+	});
+	
 	/*** kfan.io Animation ***/
 	
 	$('.collapse').addClass('uncollapsed');
