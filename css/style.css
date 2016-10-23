@@ -94,10 +94,6 @@ Small Window Size and Mobile Style
     font-size: 15vw !important; } }
 
 @media screen and (max-width: 750px) {
-  .block-logo {
-    display: none !important; }
-  .menu-logo {
-    display: block !important; }
   .header h4 {
     font-size: 80px !important; }
   .intro p {
@@ -111,6 +107,16 @@ Small Window Size and Mobile Style
       padding: 50px 0 !important; }
     .image-container .section-index {
       font-size: 15px !important; } }
+
+@media screen and (max-width: 625px) {
+  .block-logo, .nav-arrow {
+    display: none !important; }
+  .menu-logo {
+    display: block !important; }
+  .navbar-container {
+    display: none !important; }
+  .nav, .navbar {
+    display: none !important; } }
 
 @media screen and (max-width: 550px) {
   .nav, .navbar {

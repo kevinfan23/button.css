@@ -52,13 +52,6 @@ Small Window Size and Mobile Style
 	}
 }	
 @media screen and (max-width: 750px) {
-	.block-logo {
-		display: none !important;
-	}
-	
-	.menu-logo {
-		display: block !important;
-	}
 	
 	.header h4 {
 		font-size: 80px !important;
@@ -85,6 +78,25 @@ Small Window Size and Mobile Style
 		.section-index {
 			font-size: 15px !important;
 		}
+	}
+}
+
+@media screen and (max-width: 625px) {
+	
+	.block-logo, .nav-arrow {
+		display: none !important;
+	}
+		
+	.menu-logo {
+		display: block !important;
+	}
+	
+	.navbar-container {
+		display: none !important;
+	}
+	
+	.nav, .navbar {
+		display: none !important;
 	}
 }
 
