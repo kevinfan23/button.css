@@ -943,7 +943,7 @@ p.reference {
 
 .connected-overlay {
   z-index: 20 !important;
-  opacity: 2 !important; }
+  opacity: 1 !important; }
 
 .connect-container {
   width: 300px;
@@ -973,20 +973,19 @@ p.reference {
     .connect-container li.connect-item a {
       color: #f7f7f7;
       font-family: "Futura Book";
-      font-weight: 400;
       text-decoration: none;
       font-size: 20px;
       letter-spacing: 2px; }
     .connect-container li.connect-item p.connect-info {
       display: inline-block;
-      padding: 10px 0 10px 70px;
+      padding: 15px 0 15px 70px;
       font-size: 15px; }
 
 .connected-container {
   z-index: 999 !important; }
 
 .fixed-page {
-  position: fixed; }
+  position: fixed !important; }
 
 /* -------------------------------- 
 		Custom Animations

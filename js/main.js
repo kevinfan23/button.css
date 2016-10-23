@@ -1,7 +1,3 @@
-/*** Variable ***/
-var contentSections = $('.image-container'),
-	navigationItems = $('.sidenav-item a');
-
 $(document).ready(function() {
 	
 	/*** Back to Works ***/
