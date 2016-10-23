@@ -33,47 +33,46 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>Button.css</title>
 </head>
-<body>
-<!-- kfan.io Logo -->
-<div class="block-logo kfan-logo">
-	<a class="home-top" href="http://kfan.io"><span class="logo">kf<span class="collapse"><i>a</i><i>n</i></span><i id="dot">.</i></span></a>
-</div>
-
-<!-- Mobile Menu Logo -->
-<div class="block-logo menu-logo">
-	<a class="menu-icon" href="#"><span class="logo" id="menu-span">menu.</span></a>
-</div>
-		
-<!-- Side Navbar -->
-<nav class="sidenavbar-container">
-	<ul class="sidenav navbar">
-		<li class="sidenav-item sidenav-heading"><a href="#section1" data-number="1" class="sidenav-heading-link">Button.css</a></li>
-		<li class="sidenav-item"><a class="sidenav-link" href="#section2" data-number="2">00. Motivation</a></li>
-		<li class="sidenav-item"><a class="sidenav-link" href="#section3" data-number="3">01. Flip</a></li>
-		<li class="sidenav-item"><a class="sidenav-link" href="#section4" data-number="4">02. 3-D Flip</a></li>
-		<li class="sidenav-item"><a class="sidenav-link" href="#section5" data-number="5">03. Slide</a></li>
-		<li class="sidenav-item"><a class="sidenav-link" href="#section6" data-number="6">04. Switch</a></li>
-		<li class="sidenav-item"><a class="sidenav-link" href="#section7" data-number="7">05. Water Fill</a></li>
-	</ul>
-</nav>
+<body class="light kfan-io-v2-2">
 
 <div class="page-container">
+		
+	<div class="block-logo kfan-logo light">
+		<a class="home-top" href="index.html"><span class="logo">kfan<i id="dot">.</i></span></a>
+	</div>
+	
+	<!-- Mobile Menu Logo -->
+	<div class="block-logo menu-logo light">
+		<a class="menu-icon" href="#"><span class="logo" id="menu-span">menu.</span></a>
+	</div>
+			
+	<!-- Navbar -->
+	<nav class="navbar-container">
+		<ul class="nav navbar">
+			<li class="nav-item connect dark"><a href="#">CONNECT</a></li>
+		</ul>
+	</nav>
+	
+	<nav class="nav-arrow about-me">
+		<a href="index.html"><img class="nav-icon" src="img/backtoworks.png"/></a>
+	</nav>
 	
 	<!-- Menu Overlay -->
 	<div class="menu-container">
 		<ul class="menu-list">
 			<li class="menu-item">
-				<a href="http://kfan.io/project">Project</a>	
+				<a href="index.html">Project</a>	
 			</li>
 			<li class="menu-item">
 				<a href="http://kfan.io/about">About</a>	
 			</li>
 			<li class="menu-item">
-				<a href="#" id="connect">Connect</a>	
+				<a href="#" class="connect">Connect</a>	
 			</li>
 		</ul>
 	</div>
-	
+
+	<!-- Connect Overlay -->
 	<div class="connect-overlay"></div>
 
 	<nav class="connect-container">
@@ -115,7 +114,7 @@
 				</a>
 			</li>	
 		</ul>
-	</nav>
+	</nav>	
 	
 
 	
@@ -125,15 +124,15 @@
 	</div>
 	
 	<!-- Intro Page -->
-	<div class="image-container intro" id="section2">
+	<div class="image-container intro">
 		<p>
-			Button.css:
-			<span>The tiniest yet most prevalent element on the web:<br>How can we make buttons meaningful?</span></br>
+			<span>kfan.io v2.4</span></br>
+			How can project sites be more scalable?
 		</p>
 	</div>
 	
 	<!-- 2-D Flip -->
-	<section class="page-container flip" id="section3">
+	<section class="button-wrapper flip" id="section3">
 	  	<section class="section-container">
 	    	<h4>Flip</h4>
 	    
@@ -178,7 +177,7 @@
 	
 	
 	<!-- 3-D Flip -->
-	<section class="page-container flip-3d" id="section4">
+	<section class="button-wrapper flip-3d" id="section4">
 	  	<section class="section-container">
 		    <h4>3-D Flip</h4>
 		    
@@ -211,7 +210,7 @@
 	
 	
 	<!-- Slide -->
-	<section class="page-container" id="section5">
+	<section class="button-wrapper" id="section5">
 	  	<section class="section-container">
 		    <h4>Slide</h4>
 		    
@@ -238,7 +237,7 @@
 	</section>
 	
 	<!-- Switch -->
-	<section class="page-container" id="section6">
+	<section class="button-wrapper" id="section6">
 	  <section class="section-container">
 	    <h4>Switch</h4>
 	    
@@ -312,7 +311,7 @@
 	</section>
 	
 	<!-- Water Fill -->
-	<section class="page-container" id="section7">
+	<section class="button-wrapper" id="section7">
 	  <section class="section-container">
 	    <h4>Water Fill</h4>
 	    <p class="reference">*Inspired by <a href="http://codepen.io/Bergability/" target="_blank">Scott Berg</a></p>
@@ -370,6 +369,7 @@
 	
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="js/pace.js"></script>
+<script src="js/logo-connect.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
