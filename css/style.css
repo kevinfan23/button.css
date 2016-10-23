@@ -1067,10 +1067,16 @@ p.reference {
   display: none; }
 
 .pace .pace-progress {
-  background: #5CC6DF;
+  background: #9bc9ee;
+  background: -webkit-linear-gradient(left, #4776E6, #8E54E9);
+  background: -moz-linear-gradient(right, #4776E6, #8E54E9);
+  background: linear-gradient(right, #4776E6, #8E54E9);
   position: fixed;
   z-index: 2000;
   top: 0;
   right: 100%;
   width: 100%;
   height: 3px; }
+
+.dark .pace .pace-progress {
+  background: #fff; }
