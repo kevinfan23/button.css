@@ -116,7 +116,11 @@ Small Window Size and Mobile Style
   .navbar-container {
     display: none !important; }
   .nav, .navbar {
-    display: none !important; } }
+    display: none !important; }
+  .menu-item {
+    height: 100px !important; }
+    .menu-item a {
+      font-size: 50px !important; } }
 
 @media screen and (max-width: 550px) {
   .nav, .navbar {
@@ -136,6 +140,12 @@ Small Window Size and Mobile Style
     .connect-container li.connect-item p.connect-info {
       padding: 10px 0 10px 40px !important;
       font-size: 12px !important; } }
+
+@media screen and (max-width: 350px) {
+  .menu-item {
+    height: 90px !important; }
+    .menu-item a {
+      font-size: 45px !important; } }
 
 /* -------------------------------- 
 		General Style
