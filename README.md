@@ -3,8 +3,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
+
 <body><div class="container"><p><img src="http://kfan.io/button.css/img/Button.css.jpg" alt="Button.css" title=""></p>
 
 
@@ -15,7 +15,7 @@
 
 <blockquote>
   <p><strong>Features Included:</strong></p>
-  
+
   <ul>
   <li>2-D Flip Buttons</li>
   <li>3-D Flip Buttons</li>
