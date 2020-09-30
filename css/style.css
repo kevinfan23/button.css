@@ -120,7 +120,7 @@ Small Window Size and Mobile Style
   .menu-item {
     height: 100px !important; }
     .menu-item a {
-      font-size: 50px !important; } }
+      font-size: 60px !important; } }
 
 @media screen and (max-width: 550px) {
   .nav, .navbar {
@@ -128,7 +128,7 @@ Small Window Size and Mobile Style
     .nav .nav-item, .navbar .nav-item {
       font-size: 10px !important; }
   .header h4 {
-    font-size: 55px !important; } }
+    font-size: 60px !important; } }
 
 @media screen and (max-width: 450px) {
   .connect-container {
@@ -172,7 +172,7 @@ body {
 -------------------------------- */
 .button-row-container {
   width: 250px;
-  height: 50px;
+  height: 60px;
   position: relative;
   display: flex;
   flex-direction: row;
